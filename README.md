@@ -29,3 +29,31 @@ positions 37 through 47 → Link
 EXAMPLE OUTPUT:
 
 `<strong>Obama</strong> visited <strong>Facebook</strong> headquarters: <a href=”http://bit.ly/xyz”>http://bit.ly/xyz</a> @<a href=”h ttp://twitter.com/WindnWater” >WindnWater</a>`
+
+My Solution
+-----------
+
+Since (as stated) the focus is on Objected Oriented Design principles, my submitted design aimed at:
+- Ease of future extendibility and re-use
+- Ease of understanding the OOD by fellow teammates (or my future self!)
+- Minimizing possibility of errors in specifying the character locations of format tags
+
+And less emphasis were placed on:
+- Algorithm computational speed performance (address this as it scales up, or if scaling
+is a requirement from the start)
+- Minimizing lines of code (cleverness here usually translates to future code
+maintenance headache)
+
+I’m familiar with both C++ & Python for OO. C++ was chosen over Python for its strong typing. This would help minimize error (or lazy exploitation) by others looking to modify/extend the code. Plus, majority of my OOD experience was with C++.
+
+The interface between module2 (concept extraction from feed) and module3 (applying format) was ambiguous and ill-defined, perhaps intentionally(?). Additionally, the given example had errors:
+- The Twitter username is from position 55-66, not 48-56 (as stated)
+- The URL link is from position 37-54, not 37-48 (as stated)
+
+This highlights the error susceptibility of using character positions as a mean of specifying format location. What if two formats mistakenly overlapped?
+
+Thus the proposed design handles the social media input feed as a string that is made up of individual words, and treats each word as a distinct Class object of TextSegment, with formatting specified. A TextManager class then handles each of these words via a STL container (std::queue). Please UML diagram below, and the code for implementation details.
+
+![Image of UML] (https://github.com/AeroGeekDean/OOD-challenge-CPlusPlus/UML.png)
+
+In real-world situation, I would want to design this interface with the inclusion of module#2 team and the next-higher level system architect. Such that the functional allocation & method of specifying the labeling of each concepts within the feed, could be better designed.
