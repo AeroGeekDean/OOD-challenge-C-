@@ -54,6 +54,6 @@ This highlights the error susceptibility of using character positions as a mean 
 
 Thus the proposed design handles the social media input feed as a string that is made up of individual words, and treats each word as a distinct Class object of TextSegment, with formatting specified. A TextManager class then handles each of these words via a STL container (std::queue). Please UML diagram below, and the code for implementation details.
 
-![Image of UML] (https://github.com/AeroGeekDean/OOD-challenge-CPlusPlus/UML.png)
+![Image of UML] (https://github.com/AeroGeekDean/OOD-challenge-CPlusPlus/blob/master/UML.png)
 
 In real-world situation, I would want to design this interface with the inclusion of module#2 team and the next-higher level system architect. Such that the functional allocation & method of specifying the labeling of each concepts within the feed, could be better designed.
