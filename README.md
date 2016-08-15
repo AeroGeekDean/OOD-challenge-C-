@@ -48,7 +48,7 @@ The interface between **module2** (concept extraction from feed) and **module3**
 - The Twitter username is from position 55-66, not 48-56 (as stated)
 - The URL link is from position 37-54, not 37-48 (as stated)
 
-This highlights the error susceptibility of using character positions as a means of specifying format location. *What if two formats mistakenly overlapped?**
+This highlights the error susceptibility of using character positions as a means of specifying format location. *What if two formats mistakenly overlapped?*
 
 **Thus my design handles the social media input feed as a string that is made up of individual words, and treats each word as a TextSegment class object, which specifies the formatting. A TextManager class then handles each of these words via a STL container (`std::queue`).** Please UML diagram below, and the code for implementation details.
 
