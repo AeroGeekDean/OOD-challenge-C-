@@ -30,4 +30,4 @@ EXAMPLE OUTPUT:
 
 `<strong>Obama</strong> visited <strong>Facebook</strong> headquarters: <a href=”http://bit.ly/xyz”>http://bit.ly/xyz</a> @<a href=”h ttp://twitter.com/WindnWater” >WindnWater</a>`
 
-[My Solution](https://github.com/AeroGeekDean/OOD-challenge-CPlusPlus/blob/master/Dean_soln.md)
+## [My Solution](https://github.com/AeroGeekDean/OOD-challenge-CPlusPlus/blob/master/Dean_soln.md)
