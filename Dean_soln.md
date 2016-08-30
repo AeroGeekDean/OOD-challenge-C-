@@ -18,7 +18,7 @@ The interface between **module2** (concept extraction from feed) and **module3**
 This highlights the error susceptibility of using character positions as a means of specifying format location. *What if two formats mistakenly overlapped?*
 
 ### Design
-**The social media input feed is handled as a string that is made up of individual words, and treats each word as a 'SegmentBase' class-type object, which will take care of the formatting. A TextManager class then handles each of these words via a STL container (`std::queue`).**
+**The social media input feed is handled as a string that is made up of individual words. Each word is treated as a 'SegmentBase'-type class object, which will take care of the formatting. A TextManager class then manages/handles each of these words inside a STL container (`std::queue`).**
 
 **The 'SegmentBase' is an Abstract Base Class that only contains the string 'myText' and prototypes a foramttedOutput() method that is pure-virtual. The derived children classes (PlainSegment, EntitySegment, LinkSegment, TwitterSegment, etc) then implment the formattedOutput() method to apply the correct formatting, leveraging subtyping polymorphism. Any future new formats (ex: #hashtag) could be implemented by similarily extending a new child class (HashtagSegment) with the appropriate formatting method.**
 
