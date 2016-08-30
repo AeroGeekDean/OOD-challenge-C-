@@ -2,7 +2,7 @@
 //  TextManager.hpp
 //  OOD Challenge
 //
-//  Created by Dean Liu (windsurf_dean@yahoo.com) on 8/9/16.
+//  Created by Dean Liu (windsurf_dean@yahoo.com) on 8/29/16.
 //  Copyright © 2016 AeroGeekDean. All rights reserved.
 //
 
@@ -12,9 +12,7 @@
 #include <queue>
 #include <string>
 
-#include "TextFormat.hpp"
-
-class TextSegment; // forward declaration
+class SegmentBase; // forward declaration
 
 class TextManager
 {
@@ -23,15 +21,14 @@ public:
    ~TextManager();
 
     void ClearTextSegments();
-    void AddTextSegment(std::string text_in,
-                        SegmentType type_in);
+    void AddTextSegment(SegmentBase* new_seg);
+    
     std::string ProduceFormattedOutput();
     
 protected:
     
 private:
-    // container holding individual TextSegments...
-    std::queue<TextSegment*> text_segments;
+    std::queue<SegmentBase*> segments;
 };
 
 #endif /* TextManager_hpp */
