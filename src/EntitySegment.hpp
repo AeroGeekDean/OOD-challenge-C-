@@ -19,7 +19,7 @@ public:
     EntitySegment(std::string text_in);
     virtual ~EntitySegment();
     
-    virtual std::string formattedOutput();
+    virtual const std::string formattedOutput();
 
 protected:
     

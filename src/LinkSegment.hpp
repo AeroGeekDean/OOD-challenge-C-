@@ -19,7 +19,7 @@ public:
     LinkSegment(std::string text_in);
     virtual ~LinkSegment();
     
-    virtual std::string formattedOutput();
+    virtual const std::string formattedOutput();
 
 protected:
     

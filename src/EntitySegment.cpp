@@ -17,7 +17,7 @@ EntitySegment::~EntitySegment()
 {
 }
 
-std::string EntitySegment::formattedOutput()
+const std::string EntitySegment::formattedOutput()
 {
     // entity... wrap with 'strong' tags
     return "<strong>" + myText + "</strong>";

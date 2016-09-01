@@ -19,7 +19,7 @@ public:
     SegmentBase(std::string text_in);
     virtual ~SegmentBase();
     
-    virtual std::string formattedOutput() = 0;
+    virtual const std::string formattedOutput() = 0;
 
 protected:
     std::string myText;

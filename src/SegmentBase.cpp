@@ -11,9 +11,9 @@
 #include "SegmentBase.hpp"
 #include <stdio.h>
 
-SegmentBase::SegmentBase(std::string text_in)
+SegmentBase::SegmentBase(std::string text_in):
+myText(text_in)
 {
-    myText = text_in;
 }
 
 SegmentBase::~SegmentBase()

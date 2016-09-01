@@ -17,7 +17,7 @@ LinkSegment::~LinkSegment()
 {
 }
 
-std::string LinkSegment::formattedOutput()
+const std::string LinkSegment::formattedOutput()
 {
     // url link... wrap with 'a href' tags
     return "<a href=\"" + myText + "\">" + myText + "</a>";

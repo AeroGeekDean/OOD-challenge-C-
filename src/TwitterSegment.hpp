@@ -19,7 +19,7 @@ public:
     TwitterSegment(std::string text_in);
     virtual ~TwitterSegment();
     
-    virtual std::string formattedOutput();
+    virtual const std::string formattedOutput();
 
 protected:
     

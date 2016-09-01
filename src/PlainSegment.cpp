@@ -17,7 +17,7 @@ PlainSegment::~PlainSegment()
 {
 }
 
-std::string PlainSegment::formattedOutput()
+const std::string PlainSegment::formattedOutput()
 {
     // plain text... as is, no formatting
     return myText;

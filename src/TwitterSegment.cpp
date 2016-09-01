@@ -17,7 +17,7 @@ TwitterSegment::~TwitterSegment()
 {
 }
 
-std::string TwitterSegment::formattedOutput()
+const std::string TwitterSegment::formattedOutput()
 {
     // Twitter username... wrap with 'a href' to twitter url
     std::size_t pos = myText.find("@") +1;

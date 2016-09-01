@@ -19,7 +19,7 @@ public:
     PlainSegment(std::string text_in);
     virtual ~PlainSegment();
     
-    virtual std::string formattedOutput();
+    virtual const std::string formattedOutput();
 
 protected:
     
